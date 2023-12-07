@@ -40,8 +40,20 @@ document.addEventListener('DOMContentLoaded', async function () {
 
       actualizarCarrito();
     } else {
-      alert('Ingrese una cantidad válida (mayor a 0).');
+      // Mostrar SweetAlert si la cantidad es menor o igual a 0
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'Ingrese una cantidad válida (mayor a 0).',
+      });
     }
+  };
+
+  // Función para eliminar un producto del carrito
+  const eliminarDelCarrito = (id) => {
+    carritoDeCompras = carritoDeCompras.filter(producto => producto.id !== id);
+    localStorage.setItem('carritoDeCompras', JSON.stringify(carritoDeCompras));
+    actualizarCarrito();
   };
 
   // Función para confirmar el pedido con SweetAlert y promesas
@@ -126,6 +138,16 @@ document.addEventListener('DOMContentLoaded', async function () {
       const itemCarrito = document.createElement('li');
       itemCarrito.textContent = `${producto.nombre} - $${producto.precio} - Cantidad: ${producto.cantidad}`;
       listaCarrito.appendChild(itemCarrito);
+      
+      // Agregar botón para eliminar del carrito
+      const eliminarCarritoButton = document.createElement('button');
+      eliminarCarritoButton.textContent = 'Eliminar del carrito';
+      eliminarCarritoButton.classList.add('eliminarProducto'); // Agregar clase para facilitar la selección con querySelectorAll
+      eliminarCarritoButton.id = producto.id;
+      itemCarrito.appendChild(eliminarCarritoButton);
+
+      // evento botón de eliminar del carrito
+      eliminarCarritoButton.addEventListener('click', (event) => eliminarDelCarrito(event.target.id));
 
       totalProductos += producto.cantidad;
       totalPrecio += producto.precio * producto.cantidad;
@@ -137,5 +159,4 @@ document.addEventListener('DOMContentLoaded', async function () {
     cantidadTotalElement.textContent = cantidadTotal;
     precioTotalElement.textContent = precioTotal;
   };
-
 });

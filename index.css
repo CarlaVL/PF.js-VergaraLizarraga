@@ -4,6 +4,10 @@ body {
   padding: 0;
   background-color: #f4f4f4;
 }
+#encabezado{
+  display: flex;
+  justify-content: center
+}
 
 #productos, #carrito {
   max-width: 600px;
@@ -22,11 +26,17 @@ ul {
   list-style: none;
   padding: 0;
 }
+#listaCarrito{
+  display: flex;
+  flex-direction: column;
+}
 
 li {
   margin-bottom: 10px;
-  display: flex;
+  display: inline-flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center
 }
 
 img {
