@@ -1,0 +1,10 @@
+[
+    { "id": "Banana", "nombre": "Banana", "precio": 50, "imagen":"https://cdn.pixabay.com/photo/2017/06/27/22/21/banana-2449019_1280.jpg" },
+    { "id": "Manzana", "nombre": "Manzana", "precio": 30, "imagen": "https://cdn.pixabay.com/photo/2016/11/18/13/47/apple-1834639_1280.jpg" },
+    { "id": "Pera", "nombre": "Pera", "precio": 80, "imagen": "https://cdn.pixabay.com/photo/2010/12/13/10/06/food-2280_1280.jpg" },
+    { "id": "Uvas", "nombre": "Uvas", "precio": 150, "imagen": "https://cdn.pixabay.com/photo/2017/03/17/12/53/grapes-2151467_1280.jpg" },
+    { "id": "Naranja", "nombre": "Naranja", "precio": 120, "imagen" :"https://cdn.pixabay.com/photo/2014/08/26/15/25/oranges-428072_1280.jpg" },
+    { "id": "Kiwi", "nombre": "Kiwi", "precio": 200, "imagen": "https://cdn.pixabay.com/photo/2014/07/23/11/51/kiwifruit-400143_1280.jpg"},
+    { "id": "Frutilla", "nombre": "Frutilla", "precio": 90, "imagen": "https://cdn.pixabay.com/photo/2014/02/23/11/11/strawberries-272812_1280.jpg" },
+    {"id": "Sandia", "nombre": "Sandia", "precio": 65, "imagen": "https://cdn.pixabay.com/photo/2017/06/16/14/35/watermelon-2409368_1280.jpg" }
+  ]
