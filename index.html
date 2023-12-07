@@ -4,9 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="./js/index.js"></script>
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
 </head>
 <body>
-   ">
+    <div id="productos" >
+        <h2>Productos Disponibles</h2>
+        <ul id="listaProductos"></ul>
+      </div>
+      
+      <div id="carrito">
+        <h2>Carrito de Compras</h2>
+        <ul id="listaCarrito"></ul>
+        <p id="cantidadTotal"></p>
+        <p id="precioTotal"></p>
+        <button id="confirmarPedido">Confirmar Pedido</button>
+      </div>
 </body>
+<script src="./js/index.js"></script>
 </html>
